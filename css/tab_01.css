@@ -1,0 +1,126 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body{
+    height: 2000px;
+    position: relative;
+}
+/*  goTop 버튼*/
+#goTop{
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+}
+.inner {
+  width: 100%;
+  max-width: 960px;
+  background-color: rgb(233, 193, 193);
+  margin: auto;
+}
+.header {
+  height: 70px;
+  
+  background-color: rgb(113, 223, 190);
+}
+.header .inner {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .inner h1 {
+  width: 20%;
+  line-height: 70px;
+  text-align: center;
+  font-weight: bold;
+}
+.tab-nav {
+  width: 70%;
+  line-height: 70px;
+  display: flex;
+  text-align: center;
+}
+.tab-nav > li {
+  width: calc(100% / 5);
+}
+.tab-nav > li > a {
+  position: relative;
+  width: 100%;
+  display: block;
+  /* padding: 20px 0; */
+  line-height: 70px;
+  background-color: antiquewhite;
+}
+.tab-nav > li > a:hover,
+.tab-nav > li > a.active {
+  background-color: cadetblue;
+  color: #fff;
+}
+/* popup */
+.popup-btn .inner {
+  position: relative;
+}
+.popup-btn .inner a {
+    z-index: 9999;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: aqua;
+  display: block;
+  width: 110px;
+  padding:10px 20px ;
+}
+.popup-btn .inner a::after{
+    content: "🔼 close";
+}
+.popup-btn .inner a.active::after{
+    content: "🔽 open";
+}
+/* 내용 영역 */
+.tabitem{
+    position: relative;
+    width: 100%;
+    display: none;
+}
+/* .tabitem:first-child{
+    display: block;
+} */
+.tabitem img{
+    width: 100%;
+    display: block;
+}
+.tabitem .inner{
+    position: relative;
+}
+.content{
+    width: 30%;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    color: #fff;
+}
+.read-more {
+  color: #fff;
+  font-size: 13px;
+  padding: 5px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: inline-block;
+}
+.content p {
+  font-size: 12px;
+  margin: 10px 0;
+}
